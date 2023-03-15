@@ -1,0 +1,98 @@
+\documentclass[letterpaper, 11pt]{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{setspace, longtable, graphicx, hyphenat, hyperref, fancyhdr, ifthen, enumitem, amsmath, setspace}
+
+% Set page margins
+\usepackage[left=1in, right=1in, bottom=0.7in, top=0.7in]{geometry}
+
+% Set line spacing
+\renewcommand{\baselinestretch}{1.15}
+
+% --- Page formatting ---
+
+% Set link colors
+\usepackage[dvipsnames]{xcolor}
+\newcommand{\link}[2]{{\color{blue}\href{#1}{#2}}}
+
+% Set font to Libertine, including math support
+\usepackage{libertine}
+\usepackage[libertine]{newtxmath}
+
+% Remove page numbering
+\pagenumbering{gobble}
+
+% --- Document starts here ---
+
+\begin{document}
+
+% Name and date of last update to this document
+\noindent{\Huge{Floyd Everest}
+\hfill{\it\footnotesize Updated \today}}
+
+% --- Contact information and other items ---
+
+\vspace{0.5cm} 
+\begin{center}
+\begin{tabular}{ll}
+% Line 1: Email, GitHub, office location
+\textbf{Email}: feverest@student.unimelb.edu.au      &
+\hspace{0.4in} \textbf{GitHub}: \link{https://github.com/fleverest}{fleverest} \\
+% Line 2: Phone number, LinkedIn, citizenship
+\textbf{Phone}: (+61) red-act-ed!   & 
+\hspace{0.4in} \textbf{Citizenship}: Australia
+\end{tabular} \\
+\hfill\textbf{Interests}: Data Science, Data Analysis, Forecasting, Visualisation, Open-Source Software
+\end{center}
+
+% --- Start the two-column table storing the main content ---
+
+% Set spacing between columns
+\setlength{\tabcolsep}{8pt}
+
+% Set the width of each column
+\begin{longtable}{p{0.8in}p{5.4in}}
+
+% --- Section: Education ---
+
+\color{OliveGreen}{Qualifications} 
+& \textbf{University of Melbourne} \hfill Parkville, Victoria \\ 
+& Master of Data Science  \hfill March 2021 -- August 2022 \\
+& Thesis: Bayesian Auditing of IRV Elections with Dirichlet-tree priors \\
+
+& \textbf{University of Melbourne} \hfill Parkville, Victoria \\ 
+& Graduate Diploma in Data Science \hfill March 2020 -- December 2020 \\
+
+& \textbf{University of Melbourne} \hfill Parkville, Victoria \\ 
+& Bachelor of Science (Pure Mathematics) \hfill March 2015 -- December 2017 \\
+& \\
+
+% --- Section: Research experience ---
+\nohyphens{\color{OliveGreen}{Experience}} 
+& \textbf{Research Assistant: University of Melbourne (Mathematics and Statistics)} \\
+& Supervisors: Damjan Vukcevic and Michelle Blom \hfill September 2020 -- March 2023 \\
+& I worked full-time for 7 weeks from January to March. I implemented a Bayesian model for modelling Election outcomes in R (available as an R package on CRAN: \link{https://cran.r-project.org/package=elections.dtree}{elections.dtree}). I investigated model performance using real Australian Election data by running distributed simulations on Spartan HPC. This motivated me to publish my second R package \link{https://github.com/fleverest/prefio}{\textbf{prefio}}, which makes this work (and other analyses for preferencial datasets) significantly easier for other research communities.\\
+ 
+& \textbf{Research Assistant: Melbourne Business School} \\
+& Supervisor: Michael Smith \hfill March 2021 -- November 2022 \\
+& I worked casual hours during my Master of Data Science. I implemented a novel MCMC regression model for endogenous data in R \& C++.\\
+
+& \textbf{Backend Developer \& Systems Administrator: DuxTel pty. ltd. } \\
+& \hfill January 2018 -- December 2022 \\
+& I worked part-time as a Backend Developer and Sysadmin for 4 years. My main contribution was migrating a legacy e-commerce platform to an up-to-date platform. Everything was self-hosted and there were multiple third-party applications which used the shop database. To achieve this with minimal downtime I decided to add a database for the new platform to the existing mysql server. Then, I implemented triggers to keep the relevant database tables in sync.\\
+& \\
+
+% --- Section: Various skills (programming, software, languages, etc.) ---
+{\color{OliveGreen}{Skills}} 
+& \textbf{Programming \& Data Analysis}\\
+& \textit{Extensive experience with: }R, Python, Excel, C/C++, SQL, Git\\
+& \textit{Familiar with: }Haskell, Java, JavaScript, Bash, Prolog, Ruby\\
+& \textbf{Automation, Infrastructure and Networking}\\
+& \textit{Extensive experience with: }Unix, K8s, Containers, Linux Networking (L2/3), NGINX, Slurm, GitLab CI/CD\\
+& \textit{Familiar with: }Ansible, Terraform, CRON, Web Scraping (bs4), S3, FaaS\\
+& \\
+
+% --- End of CV! ---
+
+\end{longtable}
+\end{document}
